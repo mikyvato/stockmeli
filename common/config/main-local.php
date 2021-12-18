@@ -4,9 +4,9 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost:3308;dbname=stock_meli',
-            'username' => 'bloom',
-            'password' => '1234',
+            'dsn' => 'mysql:host=<address:port>;dbname=<database_name>',
+            'username' => '<username>',
+            'password' => '<password>',
             'charset' => 'utf8',
         ],
         'mailer' => [
