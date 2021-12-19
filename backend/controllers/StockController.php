@@ -56,19 +56,19 @@ class StockController extends ActiveController
 
         if ($model->load(Yii::$app->request->post(), ''))
             if (!$this->checkLogisticType($model->name))
-                return ["error", "El producto no esta en nuestros depositos"];
+                return json_encode(["error", "El producto no esta en nuestros depositos"]);
             else {
                 $validationUbication = $model->validateUbication(Stock::TYPE_CREATE);
                 if ($validationUbication === true && $model->validate()) {
-                    return $this->executeSP($model, Stock::TYPE_CREATE);
+                    return json_encode($this->executeSP($model, Stock::TYPE_CREATE));
                 } else
                 if ($model->getErrors())
-                    return $model->getErrors();
+                    return json_encode($model->getErrors());
                 else
-                    return $validationUbication;
+                    return json_encode($validationUbication);
             }
         else {
-            return ["error", "No se pudo tomar el POST"];
+            return json_encode(["error", "No se pudo tomar el POST"]);
         }
     }
 
@@ -91,11 +91,11 @@ class StockController extends ActiveController
             $validationUbication = $model->validateUbication(Stock::TYPE_REMOVE, $quantity);
             if ($validationUbication === true) {
                 $model->quantity = $quantity;
-                return $this->executeSP($model, Stock::TYPE_REMOVE);
+                return json_encode($this->executeSP($model, Stock::TYPE_REMOVE));
             } else
-                return $validationUbication;
+                return json_encode($validationUbication);
         } else {
-            return ["error", "No se pudo tomar la accion"];
+            return json_encode(["error", "No se pudo tomar la accion"]);
         }
     }
 
