@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "c8830529-7af5-404e-a6a5-0caaab2644b3",
+		"name": "StockMeli",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ubication",
+			"item": [
+				{
+					"name": "Ubication Types Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://207.246.112.93:8080/ubicationtype",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"ubicationtype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock Report by Deposit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://207.246.112.93:8080/stocks/report/AR01/LM-00-01-IZ",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"report",
+								"AR01",
+								"LM-00-01-IZ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock Report by Deposit Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://207.246.112.93:8080/stocks/report/AR01/MLA813727185",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"report",
+								"AR01",
+								"MLA813727185"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubication Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://207.246.112.93:8080/ubications",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"ubications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubication Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8u-lu6c93dM4rq7Pzb8dGZQP5RmNnyln",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Almacen\",\r\n    \"short_form\": \"AL\",\r\n    \"ubication_type_id\": 3,\r\n    \"ubication_id\": 2,\r\n    \"row_max\": 3,\r\n    \"row_min\": 0,\r\n    \"hall_max\": 4,\r\n    \"hall_min\": 2,\r\n    \"limit\": 800,\r\n    \"status\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://207.246.112.93:8080/ubications",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"ubications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Ubication Type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8u-lu6c93dM4rq7Pzb8dGZQP5RmNnyln",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Deposito\",\r\n    \"description\": \"Depositos de Mercadería catalogados por País\",\r\n    \"status\": 10\r\n}"
+						},
+						"url": {
+							"raw": "http://207.246.112.93:8080/ubicationtypes",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"ubicationtypes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Stock Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://207.246.112.93:8080/stock",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8u-lu6c93dM4rq7Pzb8dGZQP5RmNnyln",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MLA813727183\",\r\n    \"ubication\": \"AL-04-02-DE\",\r\n    \"ubication_id\": 2,\r\n    \"quantity\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://207.246.112.93:8080/stocks",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"stocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "59NzvlbkMTBjjH9rGS78yA9pQTjJghbt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"MLA813727186\",\r\n    \"ubication\": \"LM-00-01-DR\",\r\n    \"deposito\": \"AR01\",\r\n    \"quantity\": 1\r\n}"
+						},
+						"url": {
+							"raw": "http://207.246.112.93:8080/stock/remove",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"stock",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"UserTest\",\r\n    \"password\": \"12345678\"\r\n}"
+						},
+						"url": {
+							"raw": "http://207.246.112.93:8080/user/login",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://207.246.112.93:8080/users",
+							"protocol": "http",
+							"host": [
+								"207",
+								"246",
+								"112",
+								"93"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

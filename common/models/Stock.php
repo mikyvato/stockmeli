@@ -26,7 +26,7 @@ class Stock extends MyActiveRecord
     const TYPE_CREATE = 1;
     const TYPE_REMOVE = 2;
 
-    public static $side = ['IZ' => 'Izquierda', 'DR' => 'Derecha'];
+    public static $side = ['IZ' => 'Izquierda', 'DE' => 'Derecha'];
 
     /**
      * {@inheritdoc}
